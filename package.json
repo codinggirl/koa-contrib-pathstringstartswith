@@ -1,0 +1,17 @@
+{
+  "name": "koa-contrib-pathstringstartswith",
+  "version": "1.0.0",
+  "description": "a koa middleware, call an user defined middleware if ctx.path path string starts with a give prefix",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --collectCoverage"
+  },
+  "keywords": [],
+  "author": "Richard Libre",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "jest": "^25.5.1"
+  }
+}
