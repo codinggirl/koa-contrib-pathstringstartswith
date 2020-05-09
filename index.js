@@ -18,7 +18,7 @@ function _pathStringStartsWith(prefix, downStream) {
     const middleware = async (ctx, upstream) => {
         const matched = ctx.path && ctx.path.startsWith(prefix)
         if (matched) {
-            await downStream()
+            await downStream(ctx, () => {})
         }
         return upstream()
     }
