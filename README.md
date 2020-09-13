@@ -13,20 +13,20 @@ call the `middleware`.
 It do so by a simple string compare.
 Chart below shows its behavior.
 
-ctx.path | prefix | call middleware (Y/N)
--        | -      | -
-/        |  /api   | N
-/api     |  /api   | Y
-/api/    |  /api   | Y
-/api     | /api/   | N
-/api/    | /api/   | Y
-/api/v1  | /api/   | Y
-/api/v1  | /api/v  | Y
-/api/v2  | /api/v2 | Y
-/api/v2.0 | /api/v2 | Y
-/api/v21  | /api/v2 | Y
-/images   | /image   | Y
-/images/flower   | /image/   | Y
+| ctx.path       | prefix  | call middleware (Y/N) |
+|----------------|---------|-----------------------|
+| /              | /api    | N                     |
+| /api           | /api    | Y                     |
+| /api/          | /api    | Y                     |
+| /api           | /api/   | N                     |
+| /api/          | /api/   | Y                     |
+| /api/v1        | /api/   | Y                     |
+| /api/v1        | /api/v  | Y                     |
+| /api/v2        | /api/v2 | Y                     |
+| /api/v2.0      | /api/v2 | Y                     |
+| /api/v21       | /api/v2 | Y                     |
+| /images        | /image  | Y                     |
+| /images/flower | /image/ | Y                     |
 
 ## Usage
 
